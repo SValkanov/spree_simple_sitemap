@@ -29,7 +29,7 @@ Generates sitemap for your spree project based on dynamic_sitemaps
   Sitemap: http://baniamechta.com/sitemaps/sitemap.xml.gz
   ```
 
-4. Restart your server
+5. Restart your server
 
   If your server was running, restart it so that it can find the assets properly.
 

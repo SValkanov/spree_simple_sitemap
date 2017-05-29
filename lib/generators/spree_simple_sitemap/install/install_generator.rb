@@ -5,7 +5,7 @@ module SpreeSimpleSitemap
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
       def add_schedule
-        append_file 'config/schedule.rb',
+        create_file 'config/schedule.rb',
          "every 1.day, at: '5:00 am' do
             rake 'sitemap:generate'
             rake 'compress:sitemap'
