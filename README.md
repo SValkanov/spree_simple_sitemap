@@ -26,7 +26,7 @@ Generates sitemap for your spree project based on dynamic_sitemaps
 
   Add line to your '/public/robots.txt'
   ```ruby
-  Sitemap: http://baniamechta.com/sitemaps/sitemap.xml.gz
+  Sitemap: http://localhost:3000/sitemaps/sitemap.xml.gz
   ```
 
 5. Restart your server
