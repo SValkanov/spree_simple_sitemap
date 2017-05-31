@@ -16,7 +16,7 @@ module SpreeSimpleSitemap
         create_file "config/sitemap.rb",
         '# Change this to your host. See the readme at https://github.com/lassebunk/dynamic_sitemaps
          # for examples of multiple hosts and folders.
-         host "http://localhost:3000"
+         host "www.example.com"
          protocol "http"
 
          sitemap_for Spree::Product, name: :products do |product|
