@@ -14,9 +14,8 @@ Gem::Specification.new do |s|
   # s.files       = `git ls-files`.split("\n")
   # s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
-  s.requirements << 'dynamic_sitemaps'
+  s.requirements << ''
 
   s.add_dependency 'spree_core', '~> 3.1.0'
   s.add_dependency 'dynamic_sitemaps'
-  s.add_development_dependency 'dynamic_sitemaps'
 end
