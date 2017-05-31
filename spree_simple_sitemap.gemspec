@@ -18,5 +18,4 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'spree_core', '~> 3.1.0'
   s.add_dependency 'dynamic_sitemaps'
-  s.add_development_dependency 'dynamic_sitemaps'
 end
