@@ -30,11 +30,12 @@ Generates sitemap for your spree project based on [dynamic_sitemaps](https://git
   ```
 
 5. Option for google sitemap images
-  You can learn more on google sitemap guidelines [here](https://support.google.com/webmasters/answer/178636?hl=en)
 
+  You can learn more on google sitemap guidelines [here](https://support.google.com/webmasters/answer/178636?hl=en).
+  Just pass array of formed urls to 'image_urls' option
   ```ruby
   sitemap_for Product, name: :product_images do |product|
-    url root_url, image_urls: [product.image_urls.map! { |u| "#{protocol}://#{host}#{u}" }]
+    url root_url, image_urls: product.image_urls.map { |u| "#{protocol}://#{host}#{u}" }
   end
   ```
 
