@@ -24,7 +24,7 @@ module SpreeSimpleSitemap
          end
 
          sitemap_for Spree::Image, name: :product_images do |image|
-           url "#{protocol}://#{host}/products/#{product.slug}", image_urls: [product.images.map(&:attachment).map(&:url).map! {|u| "#{protocol}://#{host}#{u}"}]
+           url "#{protocol}://#{host}/products/#{product.slug}", image_urls: product.images.map(&:attachment).map(&:url).map {|u| "#{protocol}://#{host}#{u}"}
          end
 
          ping_with "#{protocol}://#{host}/sitemap.xml"'
