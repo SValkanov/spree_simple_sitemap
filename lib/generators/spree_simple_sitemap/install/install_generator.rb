@@ -30,6 +30,17 @@ module SpreeSimpleSitemap
          ping_with "#{protocol}://#{host}/sitemap.xml"'
       end
 
+      def add_compress_rake_task
+        create_file "lib/tasks/compress.rake",
+        "namespace :compress do
+  task sitemap: :environment do
+    `gzip -f \"#{Rails.root}/public/sitemaps/sitemap.xml\"`
+    `gzip -f \"#{Rails.root}/public/sitemaps/products.xml\"`
+    `gzip -f \"#{Rails.root}/public/sitemaps/product_images.xml\"`
+  end
+end"
+      end
+
       def add_javascripts
         #append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_simple_sitemap\n"
         #append_file 'vendor/assets/javascripts/spree/backend/all.js', "//= require spree/backend/spree_simple_sitemap\n"
