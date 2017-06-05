@@ -27,7 +27,7 @@ module SpreeSimpleSitemap
            url "#{protocol}://#{host}/products/#{product.slug}", image_urls: product.images.map(&:attachment).map(&:url).map {|u| "#{protocol}://#{host}#{u}"}
          end
 
-         ping_with "#{protocol}://#{host}/sitemap.xml"'
+         ping_with "#{protocol}://#{host}/sitemaps/sitemap.xml" '
       end
 
       def add_compress_rake_task

@@ -25,9 +25,9 @@ Generates sitemap for your spree project based on [dynamic_sitemaps](https://git
   ```ruby
   namespace :compress do
     task sitemap: :environment do
-    `gzip -f "#{Rails.root}/public/sitemaps/sitemap.xml"`
-    `gzip -f "#{Rails.root}/public/sitemaps/products.xml"`
-    `gzip -f "#{Rails.root}/public/sitemaps/product_images.xml"`
+      `gzip -f "#{Rails.root}/public/sitemaps/sitemap.xml"`
+      `gzip -f "#{Rails.root}/public/sitemaps/products.xml"`
+      `gzip -f "#{Rails.root}/public/sitemaps/product_images.xml"`
     end
   end
   ```
