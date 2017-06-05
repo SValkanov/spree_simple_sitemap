@@ -20,7 +20,7 @@ Generates sitemap for your spree project based on [dynamic_sitemaps](https://git
   bundle exec rails g spree_simple_sitemap:install
   ```
   This generates '/config/sitemap.rb' with default sitemap for Image and Product.
-  And lib/tasks/compress.rake
+  And 'lib/tasks/compress.rake'
 
   ```ruby
   namespace :compress do
