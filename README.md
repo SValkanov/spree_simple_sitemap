@@ -19,7 +19,20 @@ Generates sitemap for your spree project based on [dynamic_sitemaps](https://git
   ```ruby
   bundle exec rails g spree_simple_sitemap:install
   ```
-  This generates '/config/sitemap.rb' with default sitemap for Image and Product. For more option see [dynamic_sitemaps](https://github.com/lassebunk/dynamic_sitemaps).
+  This generates '/config/sitemap.rb' with default sitemap for Image and Product.
+  And lib/tasks/compress.rake
+
+  ```ruby
+  namespace :compress do
+    task sitemap: :environment do
+    `gzip -f "#{Rails.root}/public/sitemaps/sitemap.xml"`
+    `gzip -f "#{Rails.root}/public/sitemaps/products.xml"`
+    `gzip -f "#{Rails.root}/public/sitemaps/product_images.xml"`
+    end
+  end
+  ```
+
+  For more option see [dynamic_sitemaps](https://github.com/lassebunk/dynamic_sitemaps).
   Also it adds to your whenever ('/config/schedule.rb') file options for sitemap generate and compress.
 
 4. Add path to your robots.txt
